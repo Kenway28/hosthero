@@ -52,7 +52,10 @@ body {
   color: #6b6b6b;
   text-align: center;
 }
-
+strong {
+  color: var(--main-color);
+  text-decoration: underline;
+}
 /* components */
 
 /*start header*/
@@ -203,11 +206,9 @@ header .links .lang-value {
 
 .hero .container .left,
 .hero .container .right {
-
   grid-column: span 6;
- 
 }
-.hero .container .left{
+.hero .container .left {
   display: flex;
   flex-direction: column;
   justify-content: center;
@@ -225,7 +226,6 @@ header .links .lang-value {
 }
 .hero .left strong {
   color: var(--main-color);
- 
 }
 
 .hero .countdown-box {
@@ -249,20 +249,18 @@ header .links .lang-value {
   color: #444;
 }
 
-.hero .cta-btn{
+.hero .cta-btn {
   margin-top: 30px;
   padding: 10px 40px;
   white-space: nowrap;
 }
-.hero .right{
+.hero .right {
   display: flex;
   align-items: center;
   padding: 30px;
-
 }
-.hero .right img{
+.hero .right img {
   width: 100%;
-
 }
 /* end hero  */
 
@@ -271,7 +269,6 @@ header .links .lang-value {
   padding-top: 80px;
   padding-bottom: 80px;
   background-color: var(--back-color);
- 
 }
 
 .search-domain .container {
@@ -387,3 +384,65 @@ header .links .lang-value {
 }
 
 /* end services  */
+
+/* start why us */
+.why-us {
+  padding-top: 80px;
+  padding-bottom: 80px;
+}
+.why-us .container {
+  display: grid;
+  grid-template-columns: repeat(12, 1fr);
+  gap: 10px;
+  min-height: 100vh;
+}
+
+.why-us .left,
+.why-us .right {
+  grid-column: span 6;
+}
+
+.why-us .left {
+  display: flex;
+  align-items: center;
+  padding: 30px;
+}
+.why-us .left img {
+  width: 100%;
+}
+
+.why-us .right {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  padding-left: 20px;
+}
+
+.why-us ul li {
+  margin-bottom: 40px;
+
+  display: flex;
+  align-items: center;
+  gap: 10px;
+}
+.why-us ul li i {
+  color: var(--main-color);
+  font-size: 22px;
+}
+/* end why us */
+
+/* start offer */
+.offer {
+  padding-top: 80px;
+  padding-bottom: 80px;
+  background-color: var(--back-color);
+  text-align: center;
+}
+
+.offer p {
+  margin-bottom: 30px;
+}
+.offer button {
+  margin: 0 auto;
+}
+/* end offer */

@@ -189,4 +189,12 @@
       .search-domain .search-field button {
         width: 160px;
       }
+      /************/
+
+      .why-us .left,
+      .why-us .right{
+        text-align: center;
+        grid-column: span 12;
+        align-items: center;
+      }
   }
