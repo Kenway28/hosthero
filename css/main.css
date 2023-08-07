@@ -1,0 +1,249 @@
+@import url("https://fonts.googleapis.com/css2?family=Open+Sans:wght@300;400;500;600;700&display=swap");
+* {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+  outline: none;
+  list-style: none;
+}
+
+html {
+  scroll-behavior: smooth;
+  scroll-padding-top: 70px;
+}
+
+/* usage */
+:root {
+  --main-color: #5798d7;
+  --back-color: #f7f7f7;
+}
+body {
+  font-family: "Roboto", sans-serif;
+}
+
+/* components */
+.cta-btn {
+  background-color: var(--main-color);
+  padding: 10px 25px;
+  color: #fff;
+  border-radius: 5px;
+  width: fit-content;
+  text-decoration: none;
+  border: none;
+  font-size: 16px;
+  cursor: pointer;
+  text-transform: capitalize;
+  filter: drop-shadow(0px 2px 2px #00000048);
+}
+/* components */
+
+/*start header*/
+header {
+  height: 70px;
+  position: sticky;
+  top: 0;
+  background: #fff !important;
+  box-shadow: 0 0 15px 0 rgba(0, 0, 0, 0.1);
+  z-index: 100;
+}
+header .container {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  height: 100%;
+}
+header h2 {
+  color: #333;
+}
+
+header h2 a {
+  color: #333;
+  text-decoration: none;
+}
+nav {
+  display: flex;
+  flex: 1;
+}
+nav ul {
+  flex: 1;
+  display: flex;
+  justify-content: center;
+  gap: 45px;
+}
+nav ul li {
+  height: 70px;
+  display: flex;
+  align-items: center;
+  position: relative;
+}
+nav ul li span {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  height: 50px;
+}
+nav ul li span i {
+  font-size: 12px;
+}
+nav ul a {
+  text-decoration: none;
+  color: #333;
+  text-transform: capitalize;
+  font-size: 16px;
+  position: relative;
+}
+nav ul a:hover,
+nav ul li span:hover {
+  color: var(--main-color);
+  cursor: pointer;
+}
+
+nav ul li.active a {
+  color: var(--main-color);
+}
+
+.sub-menu {
+  position: absolute;
+  background-color: #fff;
+  box-shadow: 0 5px 5px 0 rgba(0, 0, 0, 0.2);
+  top: 100%;
+  left: 0px;
+  width: 300px;
+  border-radius: 0 0 10px 10px;
+  padding: 10px 0;
+  display: none;
+  border-top: 1px solid #eee;
+  z-index: 55;
+}
+.sub-menu.active {
+  display: block;
+}
+.sub-menu li {
+  height: 55px;
+  padding: 0 20px;
+  display: flex;
+  gap: 10px;
+  text-transform: capitalize;
+  font-size: 15px;
+  color: #333;
+}
+.sub-menu li i {
+  width: 40px;
+  height: 55px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-size: 25px;
+  color: #777;
+}
+
+.sub-menu li:hover i {
+  color: var(--main-color);
+}
+
+header .links {
+  display: flex;
+  gap: 30px;
+  align-items: center;
+}
+
+header .links .language {
+  display: flex;
+  gap: 15px;
+  align-items: center;
+  font-weight: 500;
+  color: #333;
+}
+header .links i {
+  font-size: 18px;
+}
+header .links .lang-value {
+  text-decoration: none;
+  color: #333;
+  font-size: 14px;
+}
+.fa-bars {
+  z-index: 50;
+  width: 30px;
+  /* height: 75px; */
+  display: none;
+  justify-content: center;
+  align-items: center;
+  font-size: 20px;
+  cursor: pointer;
+  color: #555;
+}
+/*end header*/
+
+/* start hero  */
+.hero .container {
+  display: grid;
+  grid-template-columns: repeat(12, 1fr);
+  gap: 10px;
+  min-height: 100vh;
+}
+
+.hero .container .left,
+.hero .container .right {
+
+  grid-column: span 6;
+ 
+}
+.hero .container .left{
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+}
+.hero .left h1 {
+  font-size: 3em;
+  margin-bottom: 20px;
+  color: #333;
+  text-transform: capitalize;
+}
+
+.hero .left p {
+  font-size: 18px;
+  margin-bottom: 30px;
+}
+.hero .left strong {
+  color: var(--main-color);
+ 
+}
+
+.hero .countdown-box {
+  gap: 5px;
+  display: flex;
+  align-items: center;
+  margin-bottom: 30px;
+  font-size: 20px;
+  color: #444;
+}
+.hero .countdown-box span {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 65px;
+  height: 65px;
+  font-size: 38px;
+  /* border: 2px #ddd solid; */
+  box-shadow: 0 0 3px 0 #66666671;
+  border-radius: 10px;
+  color: #444;
+}
+
+.hero .cta-btn{
+  margin-top: 30px;
+  padding: 10px 40px;
+  white-space: nowrap;
+}
+.hero .right{
+  display: flex;
+  align-items: center;
+  padding: 30px;
+
+}
+.hero .right img{
+  width: 100%;
+
+}
+/* end hero  */
