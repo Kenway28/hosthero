@@ -368,9 +368,6 @@ header .links .lang-value {
   justify-content: center;
   color: var(--main-color);
   filter: drop-shadow(0px 3px 2px #00000048);
-  /* background: var(--main-color); */
-  /* border-radius: 50%; */
-  /* box-shadow: rgba(0, 0, 0, 0.5) 0px 3px 3px 0px; */
 }
 
 .services .container .service h3 {
