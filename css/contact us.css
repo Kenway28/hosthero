@@ -1,0 +1,123 @@
+.contact-us {
+  padding-top: 80px;
+  padding-bottom: 80px;
+}
+
+.info-container {
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(300px, 330px));
+  gap: 15px;
+  margin-top: 60px;
+  justify-content: center;
+}
+
+.info-box {
+  padding: 20px;
+  border-radius: 10px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  text-align: left;
+  text-align: center;
+}
+
+.info-box i {
+  width: 75px;
+  height: 85px;
+  font-size: 75px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  color: var(--main-color);
+  filter: drop-shadow(0px 3px 2px #00000048);
+}
+
+.info-box h3 {
+  font-size: 18px;
+  text-transform: capitalize;
+  margin-top: 20px;
+  font-weight: normal;
+  font-weight: 500;
+  color: #333;
+  margin-bottom: 10px;
+  width: 100%;
+}
+
+.info-box p {
+  font-size: 13px;
+  line-height: 1.6;
+  color: #777;
+}
+
+section .container {
+  margin-top: 60px;
+}
+
+.contact-form {
+  display: grid;
+  grid-template-columns: repeat(12, 1fr);
+  padding-top: 80px;
+  padding-bottom: 80px;
+}
+.contact-form .left,
+.contact-form .right {
+  grid-column: span 6;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+.contact-form .right {
+  padding: 30px;
+  
+}
+.contact-form .right img {
+  width: 100%;
+}
+form {
+  display: flex;
+  flex-direction: column;
+  text-align: left;
+
+  width: fit-content;
+
+  border-radius: 15px;
+  width: 90%;
+}
+
+form input {
+  border: 1px solid #ddd;
+
+  color: #0e314c;
+  font-size: 16px;
+  font-weight: 500;
+  height: 50px;
+  padding: 10px 15px;
+  margin-bottom: 25px;
+  border-radius: 5px;
+}
+
+form textarea {
+  border: 1px solid #ddd;
+  color: #0e314c;
+  font-size: 16px;
+
+  resize: none;
+  height: 170px;
+  padding: 10px 15px;
+  margin-bottom: 25px;
+  border-radius: 5px;
+  font-family: "Roboto", sans-serif;
+}
+
+form button {
+  background: var(--main-color);
+  border: none;
+  border-radius: 0;
+  color: #fff;
+  font-size: 16px;
+  height: 50px;
+  padding: 10px 15px;
+  text-transform: uppercase;
+  font-weight: 600;
+  border-radius: 5px;
+}

@@ -203,7 +203,6 @@ header .links .lang-value {
 .fa-bars {
   z-index: 50;
   width: 30px;
-  /* height: 75px; */
   display: none;
   justify-content: center;
   align-items: center;
@@ -260,7 +259,6 @@ header .links .lang-value {
   width: 65px;
   height: 65px;
   font-size: 38px;
-  /* border: 2px #ddd solid; */
   box-shadow: 0 0 3px 0 #66666671;
   border-radius: 10px;
   color: #444;
@@ -565,7 +563,6 @@ header .links .lang-value {
   align-items: center;
 }
 .review {
-  /* padding: 20px 20px; */
   border-radius: 10px;
   display: flex;
   flex-direction: column;
@@ -767,12 +764,12 @@ footer .container .box ul li:hover {
 
 .go-up-btn {
   position: fixed;
-  right: 20px;
+  right: 15px;
   top: 82%;
   background-color: var(--main-color);
   width: 40px;
   height: 40px;
-  border-radius: 50%;
+  border-radius: 10px ;
   display: flex;
   justify-content: center;
   align-items: center;
@@ -780,7 +777,7 @@ footer .container .box ul li:hover {
   filter: drop-shadow(0px 3px 2px #00000048);
   cursor: pointer;
   transition: 400ms;
-  /* box-shadow: 0 0 15px 0 rgba(0, 0, 0, 0.1); */
+ 
 }
 
 .go-up-btn.hide {
