@@ -45,3 +45,21 @@ let conter = setInterval(() => {
     .toString()
     .padStart(2, "0");
 }, 1000);
+
+
+let upBtn = document.querySelector(".go-up-btn");
+
+window.onscroll = function (params) {
+  if (window.scrollY >= 1000) {
+    upBtn.classList.remove("hide");
+  } else {
+    upBtn.classList.add("hide");
+  }
+};
+
+upBtn.addEventListener("click", () => {
+  window.scrollTo({
+    top: 0,
+    behavior: "smooth",
+  });
+});
