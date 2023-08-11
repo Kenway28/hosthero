@@ -18,6 +18,9 @@ body {
 .container .left {
   padding: 80px;
 }
+form{
+  width: 380px;
+}
 form h2 {
   margin-bottom: 40px;
   text-align: center;
@@ -28,7 +31,7 @@ form .input-field {
   background-color: var(--back-color);
   display: flex;
   gap: 5px;
-  width: 380px;
+  width: 100%;
   border-radius: 5px;
   margin-bottom: 20px;
   border: 1px solid #dfdfdfa8;
