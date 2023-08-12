@@ -5,7 +5,6 @@ menuBtn.addEventListener("click", () => {
   nav.classList.toggle("active");
 });
 
-
 let subBtn = document.querySelector(".sub-menu-btn");
 let subMenu = document.querySelector(".sub-menu");
 
@@ -20,7 +19,6 @@ subBtn.addEventListener("click", () => {
     icon.classList.remove("fa-chevron-up");
   }
 });
-
 
 let currentDate = new Date().getTime();
 let nextTarget = currentDate + 554400000;
@@ -46,7 +44,6 @@ let conter = setInterval(() => {
     .padStart(2, "0");
 }, 1000);
 
-
 let upBtn = document.querySelector(".go-up-btn");
 
 window.onscroll = function (params) {
@@ -62,4 +59,23 @@ upBtn.addEventListener("click", () => {
     top: 0,
     behavior: "smooth",
   });
+});
+
+
+
+
+/*** page not found in any link  */
+let links = Array.from(document.querySelectorAll("a"));
+links.forEach(link => {
+  link.addEventListener("click", (e) => {
+  e.preventDefault();
+  var http = new XMLHttpRequest();
+  http.open("HEAD", link.href, false);
+  http.send();
+  if (http.status != 404) {
+    window.open(link.href, "_self")
+  } else {
+    window.open("../404.html", "_self")
+  }
+});
 });

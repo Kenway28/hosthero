@@ -249,3 +249,8 @@
 }
 }
 
+@media (max-width: 767px){
+  .section-heading{
+    font-size: 30px;
+  }
+}
