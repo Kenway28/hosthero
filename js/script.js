@@ -1,8 +1,10 @@
-let menuBtn = document.querySelector(".fa-bars");
+let menuBtn = document.querySelector(".nav-toggler");
 let nav = document.querySelector("nav");
 
 menuBtn.addEventListener("click", () => {
   nav.classList.toggle("active");
+  menuBtn.classList.toggle("fa-bars");
+  menuBtn.classList.toggle("fa-arrow-up");
 });
 
 let subBtn = document.querySelector(".sub-menu-btn");
@@ -21,7 +23,8 @@ subBtn.addEventListener("click", () => {
 });
 
 let currentDate = new Date().getTime();
-let nextTarget = currentDate + 554400000;
+// let nextTarget = currentDate + 554400000;
+let nextTarget = currentDate + 86420000;
 let count = document.querySelector(".counter");
 let conter = setInterval(() => {
   let dateNow = new Date().getTime();
