@@ -53,35 +53,18 @@ section .container {
   margin-top: 60px;
 }
 
-.contact-form {
-  display: grid;
-  grid-template-columns: repeat(12, 1fr);
-  padding-top: 80px;
-  padding-bottom: 80px;
-}
-.contact-form .left,
-.contact-form .right {
-  grid-column: span 6;
-  display: flex;
-  align-items: center;
+.grid-12 .col-2:first-of-type {
   justify-content: center;
-}
-.contact-form .right {
-  padding: 30px;
-  
-}
-.contact-form .right img {
-  width: 100%;
+  align-items: center;
 }
 form {
   display: flex;
   flex-direction: column;
   text-align: left;
 
-  width: fit-content;
 
   border-radius: 15px;
-  width: 90%;
+  width: 85%;
 }
 
 form input {

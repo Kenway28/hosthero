@@ -59,9 +59,30 @@
 @media (max-width: 992px) {
   .section-heading + p {
     width: 80%;
+    font-size: 12px;
   }
   .container {
     width: 100%;
+  }
+
+  .grid-12 .col-2 {
+    grid-column: span 12;
+    grid-row: 1/2;
+  }
+  .grid-12 .col-2:has(> img) {
+    grid-row: 2/3;
+    padding: 0;
+    align-items: center;
+    justify-content: center;
+  }
+  .grid-12 .col-2:not(:has(> img)) {
+    text-align: center;
+    align-items: center;
+  }
+  .grid-12 .col-2 > img {
+  
+    width: 70%;
+ 
   }
   header h2 {
     flex: 1;
@@ -144,7 +165,7 @@
   header .container button {
     padding: 10px 30px;
   }
-  .nav-toggler{
+  .nav-toggler {
     display: flex;
   }
 
@@ -166,18 +187,10 @@
     padding-bottom: 80px;
   }
 
-  .hero .container .left,
-  .hero .container .right {
-    text-align: center;
-    grid-column: span 12;
-    align-items: center;
-  }
-  .hero .left h1 {
+  .hero h1 {
     font-size: 2em;
+    margin-bottom: 15px;
     max-width: 600px;
-  }
-  .hero .right img {
-    width: 75%;
   }
   /************/
   .search-domain .search-field {
@@ -191,34 +204,12 @@
   }
   /************/
 
-  .why-us .left,
-  .why-us .right {
-    text-align: center;
-    grid-column: span 12;
-    align-items: center;
+  .plans .plans-container{
+    grid-template-columns: repeat(auto-fill, minmax(240px, 300px));
   }
-
-  .why-us .left img {
-    width: 75%;
-  }
-  .reviews-container .left,
-  .reviews-container .right {
-    text-align: center;
-    grid-column: span 12;
-    align-items: center;
-  }
-
-  .reviews-container .left {
-    grid-row: 2/3;
-    display: grid;
+  .reviews-container .col-2:first-of-type {
     grid-template-columns: repeat(auto-fill, minmax(250px, 1fr));
-    gap: 50px 30px;
-  }
-  .reviews-container .right {
-    grid-row: 1/2;
-  }
-  .reviews-container .right img {
-    width: 75%;
+    gap: 40px 30px;
   }
 
   .review {
@@ -237,21 +228,15 @@
   }
 }
 
-
 /****** contact page ******/
 
-@media (max-width: 992px){
-  .contact-form .left,
-.contact-form .right{
-  grid-column: span 12;
-}
-.contact-form .right{
-  grid-row: 1/2;
-}
-}
-
-@media (max-width: 767px){
-  .section-heading{
+@media (max-width: 767px) {
+  .section-heading {
     font-size: 30px;
   }
-}
+  .post .post-text p{
+    display: none;
+    font-size: 10px;
+    line-height: 1.3;
+  }
+} 
