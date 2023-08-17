@@ -7,8 +7,8 @@ menuBtn.addEventListener("click", () => {
   menuBtn.classList.toggle("fa-arrow-up");
 });
 
-let subBtn = document.querySelector(".sub-menu-btn");
-let subMenu = document.querySelector(".sub-menu");
+let subBtn = document.querySelector(".mega-menu-btn");
+let subMenu = document.querySelector(".mega-menu");
 
 subBtn.addEventListener("click", () => {
   subMenu.classList.toggle("active");
@@ -64,21 +64,18 @@ upBtn.addEventListener("click", () => {
   });
 });
 
-
-
-
 /*** page not found in any link  */
 let links = Array.from(document.querySelectorAll("a"));
-links.forEach(link => {
+links.forEach((link) => {
   link.addEventListener("click", (e) => {
-  e.preventDefault();
-  var http = new XMLHttpRequest();
-  http.open("HEAD", link.href, false);
-  http.send();
-  if (http.status != 404) {
-    window.open(link.href, "_self")
-  } else {
-    window.open("../404.html", "_self")
-  }
-});
+    e.preventDefault();
+    var http = new XMLHttpRequest();
+    http.open("HEAD", link.href, false);
+    http.send();
+    if (http.status != 404) {
+      window.open(link.href, "_self");
+    } else {
+      window.open("../404.html", "_self");
+    }
+  });
 });
