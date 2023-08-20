@@ -1,10 +1,12 @@
 let menuBtn = document.querySelector(".nav-toggler");
 let nav = document.querySelector("nav");
 
+let langPanelClose = document.querySelector(".close-lang-panel");
+let langOverlay = document.querySelector(".lang-overlay");
+let langIcon = document.querySelector(".lang-icon");
 menuBtn.addEventListener("click", () => {
   nav.classList.toggle("active");
-  menuBtn.classList.toggle("fa-bars");
-  menuBtn.classList.toggle("fa-arrow-up");
+  subMenu.classList.remove("active");
 });
 
 let subBtn = document.querySelector(".mega-menu-btn");
@@ -12,6 +14,7 @@ let subMenu = document.querySelector(".mega-menu");
 
 subBtn.addEventListener("click", () => {
   subMenu.classList.toggle("active");
+  langPanel.classList.remove("active");
   let icon = subBtn.querySelector("i");
   if (icon.classList.contains("fa-chevron-down")) {
     icon.classList.remove("fa-chevron-down");
@@ -22,30 +25,33 @@ subBtn.addEventListener("click", () => {
   }
 });
 
-let currentDate = new Date().getTime();
-// let nextTarget = currentDate + 554400000;
-let nextTarget = currentDate + 86420000;
-let count = document.querySelector(".counter");
-let conter = setInterval(() => {
-  let dateNow = new Date().getTime();
-  let diff = nextTarget - dateNow;
-  let days = Math.floor(diff / (1000 * 60 * 60 * 24));
-  let hours = Math.floor((diff % (1000 * 60 * 60 * 24)) / 1000 / 60 / 60);
-  let minutes = Math.floor((diff % (1000 * 60 * 60)) / (1000 * 60));
-  let seconds = Math.floor((diff % (1000 * 60)) / 1000);
+console.log(/index/.test(location.href));
+if (/index/.test(location.href)) {
+  let currentDate = new Date().getTime();
+  let nextTarget = currentDate + 86420000;
+  setInterval(() => {
+    let dateNow = new Date().getTime();
+    let diff = nextTarget - dateNow;
+    let days = Math.floor(diff / (1000 * 60 * 60 * 24));
+    let hours = Math.floor((diff % (1000 * 60 * 60 * 24)) / 1000 / 60 / 60);
+    let minutes = Math.floor((diff % (1000 * 60 * 60)) / (1000 * 60));
+    let seconds = Math.floor((diff % (1000 * 60)) / 1000);
 
-  document.querySelector(".days").innerHTML = days.toString().padStart(2, "0");
-  document.querySelector(".hours").innerHTML = hours
-    .toString()
-    .padStart(2, "0");
-  document.querySelector(".minutes").innerHTML = minutes
-    .toString()
-    .padStart(2, "0");
+    document.querySelector(".days").innerHTML = days
+      .toString()
+      .padStart(2, "0");
+    document.querySelector(".hours").innerHTML = hours
+      .toString()
+      .padStart(2, "0");
+    document.querySelector(".minutes").innerHTML = minutes
+      .toString()
+      .padStart(2, "0");
 
-  document.querySelector(".seconds").innerHTML = seconds
-    .toString()
-    .padStart(2, "0");
-}, 1000);
+    document.querySelector(".seconds").innerHTML = seconds
+      .toString()
+      .padStart(2, "0");
+  }, 1000);
+}
 
 let upBtn = document.querySelector(".go-up-btn");
 
@@ -78,4 +84,14 @@ links.forEach((link) => {
       window.open("../404.html", "_self");
     }
   });
+});
+
+langIcon.addEventListener("click", () => {
+  subMenu.classList.remove("active");
+  nav.classList.remove("active");
+  langOverlay.classList.toggle("active");
+});
+
+langPanelClose.addEventListener("click", () => {
+  langOverlay.classList.toggle("active");
 });

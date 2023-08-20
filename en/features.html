@@ -11,15 +11,15 @@
       crossorigin="anonymous"
       referrerpolicy="no-referrer"
     />
-    <link rel="stylesheet" href="css/main.css" />
-    <link rel="stylesheet" href="css/media.css" />
-    <script src="js/script.js" defer></script>
+    <link rel="stylesheet" href="../css/main.css" />
+    <link rel="stylesheet" href="../css/media.css" />
+    <script src="../js/script.js" defer></script>
   </head>
   <body>
     <!--header-->
     <header>
       <div class="container">
-        <h2><a href="index.html">HostHero</a></h2>
+        <h2><a href="/">HostHero</a></h2>
         <nav>
           <ul>
             <li>
@@ -81,15 +81,30 @@
               <span><a href="contact us.html">contact</a></span>
             </li>
           </ul>
-          <div class="links">
-            <div class="language">
-              <i class="fa-solid fa-globe"></i>
-              <a class="lang-value" href="ar/index.html">EN</a>
-            </div>
-            <a class="cta-btn" href="login.html">login</a>
-          </div>
         </nav>
-
+        <div class="links">
+          <div class="language">
+            <i class="fa-solid fa-globe lang-icon"></i>
+            <!-- <span class="lang-value">EN</span> -->
+            <div class="lang-overlay">
+              <div class="lang-panel">
+                <div class="lang-panel-header">
+                  <h2>Choose your language</h2>
+                  <i class="fa-solid fa-xmark close-lang-panel"></i>
+                </div>
+                <ul class="lang-list">
+                  <li class="current-lang">
+                    <a data-lang-code="en" href="index.html">english</a>
+                  </li>
+                  <li>
+                    <a data-lang-code="ar" href="../ar/index.html">العربية</a>
+                  </li>
+                </ul>
+              </div>
+            </div>
+          </div>
+          <a class="cta-btn" href="login.html">login</a>
+        </div>
         <i class="fa-solid fa-bars nav-toggler"></i>
       </div>
     </header>

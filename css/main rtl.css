@@ -1,0 +1,60 @@
+@import url("https://fonts.googleapis.com/css2?family=Tajawal:wght@300;400;500;700;800;900&display=swap");
+body {
+  direction: rtl;
+  font-family: "Tajawal", sans-serif;
+}
+.cta-btn {
+  font-weight: 500 !important;
+  font-family: "Tajawal", sans-serif;
+}
+.section-heading p {
+  font-weight: 500;
+}
+.search-domain .search-field .cta-btn {
+  border-radius: 5px 0 0 5px;
+}
+
+.domain-price {
+  flex-direction: row-reverse;
+}
+
+.features .container .feature h3 {
+  font-weight: 600;
+}
+
+.features .container .feature p {
+  font-weight: 500;
+}
+
+.why-us ul li {
+  font-weight: 500;
+}
+
+.offer p,
+.offer .num-box,
+.offer .text-box {
+  flex-direction: row-reverse;
+  font-weight: 600;
+}
+
+.review {
+  text-align: right;
+}
+
+.post .post-text {
+  text-align: right;
+}
+.post .post-info i {
+  margin-right: 0;
+  margin-left: 10px;
+}
+
+.post .post-text p {
+  font-weight: 500;
+}
+
+
+footer .container .box p,
+footer .container .box ul li {
+  font-weight: 500;
+}

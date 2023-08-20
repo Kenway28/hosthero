@@ -4,11 +4,11 @@
 }
 
 .info-container {
-  display: grid;
-  grid-template-columns: repeat(auto-fill, minmax(300px, 330px));
+  display: flex;
   gap: 15px;
   margin-top: 60px;
   justify-content: center;
+  flex-wrap: wrap;
 }
 
 .info-box {
@@ -19,6 +19,7 @@
   align-items: center;
   text-align: left;
   text-align: center;
+  flex: 1 0 200px;
 }
 
 .info-box i {
@@ -61,7 +62,6 @@ form {
   display: flex;
   flex-direction: column;
   text-align: left;
-
 
   border-radius: 15px;
   width: 85%;
