@@ -25,7 +25,6 @@ subBtn.addEventListener("click", () => {
   }
 });
 
-console.log(/index/.test(location.href));
 if (/index/.test(location.href)) {
   let currentDate = new Date().getTime();
   let nextTarget = currentDate + 86420000;
@@ -94,4 +93,18 @@ langIcon.addEventListener("click", () => {
 
 langPanelClose.addEventListener("click", () => {
   langOverlay.classList.toggle("active");
+});
+
+// set default lang
+
+let langBtn = document.querySelectorAll(".lang-list li a");
+
+
+langBtn.forEach((element) => {
+  element.addEventListener("click", () => {
+    localStorage.setItem(
+      "host-hero-lang",
+      element.getAttribute("data-lang-code")
+    );
+  });
 });

@@ -58,3 +58,9 @@ footer .container .box p,
 footer .container .box ul li {
   font-weight: 500;
 }
+
+
+.copyright{
+  font-weight: 500;
+  font-size: 16px;
+}
